@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.cm.pojo.Studentcourse" table="studentcourse" schema="electivecoursedb">
+        <id name="scid" column="scid"/>
+        <many-to-one name="courseByCid" class="com.cm.pojo.Course">
+            <column name="cid"/>
+        </many-to-one>
+        <many-to-one name="studentBySid" class="com.cm.pojo.Student">
+            <column name="sid"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

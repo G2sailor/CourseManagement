@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/electivecoursedb</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <mapping class="com.cm.pojo.Course"/>
+    <mapping resource="com/cm/pojo/Course.hbm.xml"/>
+    <mapping class="com.cm.pojo.Guider"/>
+    <mapping resource="com/cm/pojo/Guider.hbm.xml"/>
+    <mapping resource="com/cm/pojo/Manager.hbm.xml"/>
+    <mapping class="com.cm.pojo.Manager"/>
+    <mapping class="com.cm.pojo.Student"/>
+    <mapping resource="com/cm/pojo/Student.hbm.xml"/>
+    <mapping resource="com/cm/pojo/Studentcourse.hbm.xml"/>
+    <mapping class="com.cm.pojo.Studentcourse"/>
+    <mapping resource="com/cm/pojo/Teacher.hbm.xml"/>
+    <mapping class="com.cm.pojo.Teacher"/>
+    <!--    <mapping resource="cn/zzxb/po/TxlsEntity.hbm.xml"/>
+        <mapping class="cn.zzxb.po.TxlsEntity"/>
+        <mapping resource="cn/zzxb/po/UsersEntity.hbm.xml"/>
+        <mapping class="cn.zzxb.po.UsersEntity"/>
+        <mapping resource="cn/zzxb/po/Txls.hbm.xml"/>
+        <mapping class="cn.zzxb.po.Txls"/>
+        <mapping resource="cn/zzxb/po/Users.hbm.xml"/>
+        <mapping class="cn.zzxb.po.Users"/>-->
+    <!-- <mapping resource="cn/maven/model/UsersEntity.hbm.xml"/>
+     <mapping class="cn.maven.model.UsersEntity"/>-->
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

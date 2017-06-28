@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.cm.pojo.Student" table="student" schema="electivecoursedb">
+        <id name="sid" column="sid"/>
+        <property name="studentname" column="studentname"/>
+        <property name="studentpassword" column="studentpassword"/>
+        <property name="studentnumber" column="studentnumber"/>
+        <property name="studentsex" column="studentsex"/>
+        <property name="studentclass" column="studentclass"/>
+        <set name="studentcoursesBySid" inverse="true">
+            <key>
+                <column name="sid"/>
+            </key>
+            <one-to-many not-found="ignore" class="com.cm.pojo.Studentcourse"/>
+        </set>
+    </class>
+</hibernate-mapping>

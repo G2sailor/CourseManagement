@@ -1,0 +1,1 @@
+document.write("这是引入的外部脚本js");
